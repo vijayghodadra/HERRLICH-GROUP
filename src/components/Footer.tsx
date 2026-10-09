@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
             </div>
 
             <p style={{ fontSize: '13.5px', color: '#6E6E73', lineHeight: 1.6, maxWidth: '320px', marginBottom: '20px' }}>
-              Valence Risk & Forensic Advisory delivers institutional corporate intelligence, multi-jurisdictional due diligence, and fraud risk consulting for corporate leadership and audit committees.
+              Herrlich Group delivers institutional corporate intelligence, multi-jurisdictional due diligence, and fraud risk consulting for corporate leadership and audit committees.
             </p>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12.5px', color: '#1D1D1F', fontWeight: 550 }}>
@@ -97,7 +97,7 @@ export const Footer: React.FC = () => {
         {/* Footer Bottom Bar */}
         <div className="footer-bottom">
           <div>
-            © {new Date().getFullYear()} Valence Forensic & Corporate Advisory LLP. All rights reserved.
+            © {new Date().getFullYear()} Herrlich Group. All rights reserved.
           </div>
           <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
             <Link to="/privacy-policy" className="footer-link" style={{ fontSize: '12.5px' }}>

@@ -28,7 +28,7 @@ interface IndustriesPageProps {
 
 export const Industries: React.FC<IndustriesPageProps> = ({ onOpenConsultation }) => {
   useEffect(() => {
-    document.title = 'Industries We Serve | Valence Risk & Forensic Advisory';
+    document.title = 'Industries We Serve | HERRLICH GROUP';
     window.scrollTo(0, 0);
 
     const hash = window.location.hash.replace('#', '');

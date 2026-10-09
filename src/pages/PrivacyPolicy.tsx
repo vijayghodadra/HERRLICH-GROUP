@@ -3,7 +3,7 @@ import { Lock } from 'lucide-react';
 
 export const PrivacyPolicy: React.FC = () => {
   useEffect(() => {
-    document.title = 'Privacy Governance & Client Confidentiality | Valence Advisory';
+    document.title = 'Privacy Governance & Client Confidentiality | HERRLICH GROUP';
     window.scrollTo(0, 0);
   }, []);
 
@@ -19,7 +19,7 @@ export const PrivacyPolicy: React.FC = () => {
             Privacy Governance & Confidentiality Covenant.
           </h1>
           <p className="section-subtitle">
-            How Valence Risk & Forensic Advisory safeguards engagement communications, electronic work products, and client identity under statutory data protection frameworks.
+            How Herrlich Group safeguards engagement communications, electronic work products, and client identity under statutory data protection frameworks.
           </p>
         </div>
 

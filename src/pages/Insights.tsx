@@ -7,7 +7,7 @@ export const Insights: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('All');
 
   useEffect(() => {
-    document.title = 'Perspectives & Forensics Briefings | Valence Advisory';
+    document.title = 'Perspectives & Forensics Briefings | HERRLICH GROUP';
     window.scrollTo(0, 0);
 
     const hash = window.location.hash.replace('#', '');

@@ -30,7 +30,7 @@ export const Services: React.FC<ServicesPageProps> = ({ onOpenConsultation }) =>
   const [selectedService, setSelectedService] = useState<ServiceItem>(servicesData[0]);
 
   useEffect(() => {
-    document.title = 'Practice Areas & Services | Valence Risk & Forensic Advisory';
+    document.title = 'Practice Areas & Services | HERRLICH GROUP';
     window.scrollTo(0, 0);
 
     // Check hash for specific service

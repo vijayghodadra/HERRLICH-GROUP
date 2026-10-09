@@ -8,7 +8,7 @@ interface AboutProps {
 
 export const About: React.FC<AboutProps> = ({ onOpenConsultation }) => {
   useEffect(() => {
-    document.title = 'About Us | Valence Risk & Forensic Advisory';
+    document.title = 'About Us | HERRLICH GROUP';
     window.scrollTo(0, 0);
   }, []);
 
@@ -44,7 +44,7 @@ export const About: React.FC<AboutProps> = ({ onOpenConsultation }) => {
             Objective Intelligence for High-Stakes Governance.
           </h1>
           <p className="section-subtitle">
-            Valence Risk & Forensic Advisory was founded to provide corporate leadership, special board committees, and general counsels with unvarnished factual clarity during complex business situations.
+            Herrlich Group was founded to provide corporate leadership, special board committees, and general counsels with unvarnished factual clarity during complex business situations.
           </p>
         </div>
 

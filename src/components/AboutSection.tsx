@@ -69,7 +69,7 @@ export const AboutSection: React.FC = () => {
             </h2>
 
             <p style={{ fontSize: '16.5px', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '20px' }}>
-              Valence Risk & Forensic Advisory operates at the intersection of investigative field intelligence, forensic financial analysis, and board-level risk management.
+              Herrlich Group operates at the intersection of investigative field intelligence, forensic financial analysis, and board-level risk management.
             </p>
 
             <p style={{ fontSize: '15px', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '32px' }}>

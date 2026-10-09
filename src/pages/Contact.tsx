@@ -17,7 +17,7 @@ export const Contact: React.FC = () => {
   const [submittedData, setSubmittedData] = useState<{ name: string; refId: string } | null>(null);
 
   useEffect(() => {
-    document.title = 'Confidential Consultation & Office Desks | Valence Advisory';
+    document.title = 'Confidential Consultation & Office Desks | HERRLICH GROUP';
     window.scrollTo(0, 0);
   }, []);
 

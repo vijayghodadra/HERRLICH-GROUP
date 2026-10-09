@@ -277,7 +277,7 @@ export const ContactSection: React.FC = () => {
                       style={{ marginTop: '3px' }}
                     />
                     <span style={{ fontSize: '12.5px', color: '#6E6E73', lineHeight: 1.45 }}>
-                      I agree to the processing of this inquiry under Valence Advisory's strict non-disclosure covenant and confirm I am authorized to represent this entity.
+                      I agree to the processing of this inquiry under Herrlich Group's strict non-disclosure covenant and confirm I am authorized to represent this entity.
                     </span>
                   </label>
                   {errors.privacyConsent && <div style={{ color: '#FF3B30', fontSize: '12px', marginTop: '4px' }}>{errors.privacyConsent}</div>}

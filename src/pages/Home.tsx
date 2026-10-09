@@ -15,7 +15,7 @@ interface HomeProps {
 
 export const Home: React.FC<HomeProps> = ({ onOpenConsultation }) => {
   useEffect(() => {
-    document.title = 'Valence Risk & Forensic Advisory | Corporate Intelligence & Strategic Clarity';
+    document.title = 'HERRLICH GROUP | Uncovering Truths. Ensuring Justice.';
     window.scrollTo(0, 0);
   }, []);
 
