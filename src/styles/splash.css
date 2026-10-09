@@ -1,0 +1,163 @@
+/* ==========================================================================
+   HERRLICH GROUP - PREMIUM ANIMATED SPLASH SCREEN STYLES
+   ========================================================================== */
+
+.splash-screen-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100dvh;
+  background-color: #FFFFFF;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 600ms cubic-bezier(0.4, 0, 0.2, 1),
+              visibility 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.splash-screen-overlay.fading-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Centered Stage maintaining 1792:878 logo aspect ratio */
+.splash-stage {
+  position: relative;
+  width: min(450px, 85vw);
+  max-width: calc(100vw - 32px);
+  aspect-ratio: 1792 / 878;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+/* Step 2: Logo Wordmark & Tagline Fade-In + Scale (700ms) */
+.splash-wordmark-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.96);
+  animation: splashLogoFadeIn 700ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes splashLogoFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.splash-wordmark-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+}
+
+/* Step 3: SVG Rays Layer overlaying wordmark in exact coordinate space */
+.splash-rays-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+/* Individual Ray Stroke Drawing - Scales proportionally with SVG viewBox */
+.splash-ray-line {
+  opacity: 0;
+  stroke: #531454;
+  stroke-linecap: round;
+  /* CRITICAL: Do NOT use non-scaling-stroke so line thickness scales proportionally with the logo on mobile screens */
+  will-change: stroke-dashoffset, opacity;
+}
+
+/* When active, animate stroke-dashoffset from ray length to 0 */
+.splash-ray-line.animate {
+  animation: splashDrawRay 280ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes splashDrawRay {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: var(--ray-length);
+  }
+  2% {
+    opacity: 1;
+    stroke-dashoffset: var(--ray-length);
+  }
+  100% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Subtle Skip Button for Accessibility / Convenience */
+.splash-skip-btn {
+  position: absolute;
+  bottom: max(20px, env(safe-area-inset-bottom, 20px));
+  right: max(20px, env(safe-area-inset-right, 20px));
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #86868B;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 300ms ease, background 200ms ease, color 200ms ease;
+  z-index: 100000;
+}
+
+.splash-skip-btn:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.08);
+  color: #1D1D1F;
+}
+
+/* Mobile Responsive Scaling */
+@media (max-width: 640px) {
+  .splash-stage {
+    width: min(300px, calc(100vw - 36px));
+  }
+  .splash-skip-btn {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .splash-stage {
+    width: min(280px, calc(100vw - 28px));
+  }
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  .splash-screen-overlay {
+    display: none !important;
+  }
+}
